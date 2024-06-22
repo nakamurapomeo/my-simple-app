@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>簡単なアプリ</title>
+    <title>AI小説生成アプリ</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>ボタンを押してメッセージを表示</h1>
-    <button onclick="showMessage()">ボタン</button>
-    <p id="message"></p>
-
-    <script>
-        function showMessage() {
-            document.getElementById('message').innerText = "こんにちは、GitHub Pages!";
-        }
-    </script>
+    <div class="container">
+        <h1>AI小説生成アプリ</h1>
+        <form id="novelForm">
+            <label for="keywords">フリーワード:</label>
+            <input type="text" id="keywords" name="keywords" placeholder="例: 魔法, 学校, 冒険">
+            <div>
+                <input type="checkbox" id="fantasy" name="genre" value="fantasy">
+                <label for="fantasy">ファンタジー</label>
+                <input type="checkbox" id="romance" name="genre" value="romance">
+                <label for="romance">ロマンス</label>
+            </div>
+            <button type="submit">小説を生成</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
+
